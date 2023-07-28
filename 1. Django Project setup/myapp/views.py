@@ -4,8 +4,12 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index.html')
+    # read the Database
+    # create context variable (dict)
+    my_dict = {'pages': ['one', 'two', 'three', 'four'],
+               'courses': ['frontend', 'backend']}
+    return render(request, 'myapp/index.html', context=my_dict)
 
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'myapp/home.html')

@@ -11,7 +11,7 @@ class Profile(models.Model):
         ('M', 'Male'),
         ('F', 'Female'),
     ]
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=140)
     profile_pic = models.ImageField(null=True, blank=True)
     age = models.IntegerField(default=0)
     gender = models.CharField(max_length=1, choices=GENDER_COICES)
